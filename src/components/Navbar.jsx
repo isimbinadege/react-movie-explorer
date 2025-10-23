@@ -16,7 +16,7 @@ function Navbar() {
         <Link to="/" className="flex items-center gap-2">
           <Film className="text-red-500 w-6 h-6" />
           <span className="text-white font-bold text-lg tracking-wide">
-            Movie<span className="text-red-500">Explorer</span>
+            Movi<span className="text-red-500">X</span>
           </span>
         </Link>
 
