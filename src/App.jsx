@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import MovieDetails from './pages/MovieDetails';
 import Footer from './components/Footer';
 import Favorites from './pages/Favorites';
+import About from './pages/About';
 function App(){
   return (
     <Router>
@@ -14,6 +15,7 @@ function App(){
         <Route path="/" element={<Home />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/Favorites" element={<Favorites/>}/>
+        <Route path="/About" element={<About/>} />
                 </Routes>
                 <Footer/>
     </Router>

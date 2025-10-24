@@ -61,7 +61,7 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/about"
+            to="/About"
             onClick={() => setOpen(false)}
             className={({ isActive }) =>
               isActive ? activeLink : normalLink
