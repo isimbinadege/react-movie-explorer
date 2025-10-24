@@ -48,7 +48,7 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/favorites"
+            to="/Favorites"
             onClick={() => setOpen(false)}
             className={({ isActive }) =>
               isActive ? activeLink : normalLink

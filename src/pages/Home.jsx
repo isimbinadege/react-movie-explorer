@@ -3,10 +3,15 @@ import CategoryFilter from "../components/CategoryFilter";
 import useFetchMovies from "../hooks/useFetchMovies";
 import MovieCard from "../components/MovieCard";
 import SearchBar from "../components/SearchBar";
+import useFavorites from "../hooks/useFavorites";
 import ruth from "../assets/images/ruth.jpeg";
 
 function Home() {
   const { movies, loading, error } = useFetchMovies();
+
+  // ✅ Extract values from favorites hook
+  const { favorites, toggleFavorite, isFavorite } = useFavorites();
+
   const [selectedGenre, setSelectedGenre] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -63,7 +68,11 @@ function Home() {
           filteredMovies.length > 0 ? (
             <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {filteredMovies.map((movie) => (
-                <MovieCard key={movie.id} movie={movie} />
+                <MovieCard
+                  key={movie.id}
+                  movie={movie}
+                  favoritesHook={{ favorites, toggleFavorite, isFavorite }} // ✅ clean pass
+                />
               ))}
             </div>
           ) : (
