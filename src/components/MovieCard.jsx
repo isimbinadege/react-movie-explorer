@@ -1,14 +1,16 @@
+// src/components/MovieCard.jsx
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useFavoritesContext } from "../context/FavoritesContext";
 
-function MovieCard({ movie, favoritesHook }) {
-  const { isFavorite, toggleFavorite } = favoritesHook;
+function MovieCard({ movie }) {
+  const { isFavorite, toggleFavorite } = useFavoritesContext();
   const navigate = useNavigate();
 
   const handleFavoriteClick = (e) => {
-    e.preventDefault(); // stop the Link from triggering
+    e.preventDefault(); 
     toggleFavorite(movie);
-    navigate("/favorites"); // go to favorites page
+    navigate("/favorites");
   };
 
   return (
@@ -35,7 +37,6 @@ function MovieCard({ movie, favoritesHook }) {
         </p>
       </Link>
 
-      {/* Add to Favorites Button */}
       <button
         onClick={handleFavoriteClick}
         className="mt-3 px-4 py-2 bg-red-600 rounded-lg font-semibold hover:bg-red-700 transition"

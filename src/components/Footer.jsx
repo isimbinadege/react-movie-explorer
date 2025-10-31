@@ -5,12 +5,12 @@ function Footer() {
   return (
     <footer className="relative bg-black  backdrop-blur-sm text-white py-8 ">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-        {/* Branding */}
+       
         <div className="text-red-500 font-bold text-lg">
           MovieX
         </div>
 
-        {/* Links */}
+       
         <div className="flex flex-wrap gap-4 text-gray-300 text-sm">
           <Link to="/" className="hover:text-red-500 transition">Home</Link>
           <Link to="/favorites" className="hover:text-red-500 transition">Favorites</Link>

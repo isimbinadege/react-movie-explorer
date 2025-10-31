@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import ruth from "../assets/images/ruth.jpeg"; // Use the same background image as Home
+import ruth from "../assets/images/ruth.jpeg"; 
 
 function MovieDetails() {
   const { id } = useParams();
@@ -40,7 +40,7 @@ function MovieDetails() {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* Blur + dark overlay */}
+      
       <div className="absolute inset-0 bg-gradient-to-b from-black to-red-900/30 backdrop-blur-sm"></div>
 
       {/* Content */}
